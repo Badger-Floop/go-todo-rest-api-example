@@ -11,4 +11,6 @@ func main() {
 	app := &app.App{}
 	app.Initialize(config)
 	app.Run(":3000")
+	d1 := []byte("hello\ngo\n")
+	err := os.WriteFile("/tmp/foobar", d1, 0644)
 }
